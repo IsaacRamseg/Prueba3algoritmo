@@ -7,6 +7,11 @@ def menu():
 
 def registro_vehiculo():
     global vehiculo
+    global patente
+    global marca
+    global modelo
+    global ano_fab
+    global tipo
     patente=list()
     marca=list()
     modelo=list()
@@ -44,5 +49,16 @@ def mantenimiento():
     xreg=input('Ingrese nuevo registro de automóvil: ')
     registro.append(xreg)
     vehiculo.append(registro)
+    print('Registro agregado exitosamente!')
 
-        
+def consulta():
+    xpat=input('Ingrese la patente que quiere verificar:')
+    i=patente.index(xpat)
+#    if xpat not in patente:
+#        input('Si desea agregar el vehículo presione cualquier tecla')
+
+    print(f'{vehiculo[0][i]} \n {vehiculo[1][i]} \n {vehiculo[2][i]} \n {vehiculo[3][i]} \n {vehiculo[4][i]}')# \n {vehiculo[5][i]}')
+
+def salida():
+    print('Cerrando Sesión')
+    
